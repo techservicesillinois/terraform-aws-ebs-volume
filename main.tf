@@ -13,14 +13,14 @@ variable "size" {
 
 variable "tags" {
   description = "Mapping of tags to assign to resources"
-  default     = {}
+  type        = map(string)
 }
 
 resource "aws_ebs_volume" "default" {
-  availability_zone = "${var.availability_zone}"
-  encrypted         = "${var.encrypted}"
-  size              = "${var.size}"
-  tags              = "${var.tags}"
+  availability_zone = var.availability_zone
+  encrypted         = var.encrypted
+  size              = var.size
+  tags              = var.tags
 
   lifecycle {
     prevent_destroy = true
@@ -28,9 +28,9 @@ resource "aws_ebs_volume" "default" {
 }
 
 output "arn" {
-  value = "${aws_ebs_volume.default.arn}"
+  value = aws_ebs_volume.default.arn
 }
 
 output "id" {
-  value = "${aws_ebs_volume.default.id}"
+  value = aws_ebs_volume.default.id
 }

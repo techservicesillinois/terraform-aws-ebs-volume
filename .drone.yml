@@ -1,7 +1,8 @@
 pipeline:
     build:
-        image: hashicorp/terraform:0.11.14
+        image: hashicorp/terraform:0.12.9
         commands:
             - terraform version
-            - terraform validate -check-variables="false"
-            - terraform fmt -check=true
+            - terraform init -backend=false
+            - AWS_DEFAULT_REGION=us-east-2 terraform validate
+            - terraform fmt -check
