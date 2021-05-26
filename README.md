@@ -1,6 +1,6 @@
 # ebs-volume
 
-[![Build Status](https://drone.techservices.illinois.edu/api/badges/techservicesillinois/terraform-aws-ebs-volume/status.svg)](https://drone.techservices.illinois.edu/techservicesillinois/terraform-aws-ebs-volume)
+[![Terraform actions status](https://github.com/techservicesillinois/terraform-aws-ebs-volume/workflows/terraform/badge.svg)](https://github.com/techservicesillinois/terraform-aws-ebs-volume/actions)
 
 Provides an Elastic Block Storage volume to make persistent block-level storage volumes available to EC2 instances.
 
