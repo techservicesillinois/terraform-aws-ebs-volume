@@ -39,10 +39,15 @@ The following arguments are supported:
 
 * `encrypted` - (Optional) Encrypt data on volume at rest. Default: true.
 
+* `iops` - (Optional) Amount of IOPS to provision for the disk. Only valid for type of `io1`, `io2` or `gp3`.
+
 * `size` - (Optional) The size of the drive in GiBs.
 
 * `tags` - (Optional) A mapping of tags to assign to the resource.
 
+* `throughput` - (Optional) Throughput supported by volume in MiB/s. Only valid for type `gp3`.
+
+* `type` – (Optional) Type of volume.
 
 Attributes Reference
 --------------------
